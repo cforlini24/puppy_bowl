@@ -128,4 +128,25 @@ span{
         padding-top: 8%;
       flex-direction: column;
     }
+    #homeBttn{
+        padding: 0;
+    }
+
+    .detailContainer{
+        margin-top: 15%;
+        margin-bottom: 3%;
+        flex-direction: column;
+        font-size: .5em;
+        align-items: center;
+        text-align: start;
+    }
+
+    .detailPic{
+        width: 200px;
+        height: 300px;
+    }
+
+    .detailText{
+        width: 100%;
+    }
   }
