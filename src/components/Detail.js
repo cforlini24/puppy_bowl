@@ -2,7 +2,7 @@ import react, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Detail = (props) => {
-    let {puppies} = props;
+    let {puppies, setUseSearchBar} = props;
     let {detailId} = useParams();
     let detailPuppy = {};
     let [teamData, setTeamData] = useState([])
@@ -44,6 +44,7 @@ const Detail = (props) => {
     }
 
     useEffect(()=>{
+        setUseSearchBar(false);
         getTeamData();
     },[])
 

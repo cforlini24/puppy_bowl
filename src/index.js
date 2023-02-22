@@ -5,6 +5,9 @@ import { Detail, Main, Navbar, ScrollToTop } from "./components";
 
 const App = () => {
     const [puppies, setPuppies] = useState([])
+    const [searchTerm, setSearchTerm] = useState("");
+    const [useSearchBar, setUseSearchBar] = useState(true)
+
 
 
     async function getPuppiesData () {
@@ -24,10 +27,10 @@ const App = () => {
     return (
         <BrowserRouter>
             <ScrollToTop />
-            <Navbar />
+            <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} useSearchBar={useSearchBar} setUseSearchBar = {setUseSearchBar}/>
             <Routes>
-                <Route path="/" element = {<Main puppies = {puppies} />}/>
-                <Route path="/:detailId" element = {<Detail puppies = {puppies}/>} />
+                <Route path="/" element = {<Main puppies = {puppies} searchTerm={searchTerm} setUseSearchBar={setUseSearchBar}/>}/>
+                <Route path="/:detailId" element = {<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar}/>} />
             </Routes>
         </BrowserRouter>
     )

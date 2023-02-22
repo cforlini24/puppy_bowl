@@ -24,12 +24,29 @@ body{
 }
 
 nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
     padding: 1%;
     background-color: #35635b;
     border-bottom: solid #529471 ;
+    height: 4%;
+}
+input{
+    margin-right: 5%;
+    font-size: 25px;
+    background-color: #e5f1e3;
+    color: #529471;
+    border-color: #529471;
+    border-radius: 5%;
+    border-style: inset;
+}
+
+.searchOff{
+    display: none;
 }
 
 #containerContainer{
@@ -38,6 +55,7 @@ nav{
     flex-wrap: wrap;
     align-items:center;
     justify-content: center;
+    padding-bottom: 10%;
 }
 
 
@@ -148,5 +166,8 @@ span{
 
     .detailText{
         width: 100%;
+    }
+    input{
+        width: 50%;
     }
   }
