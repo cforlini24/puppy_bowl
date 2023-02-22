@@ -38,6 +38,11 @@ const Detail = (props) => {
     //pull team name
     let teamName = detailTeam.name;
 
+    //function to fix capitalization on status value
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     useEffect(()=>{
         getTeamData();
     },[])
@@ -46,11 +51,11 @@ const Detail = (props) => {
         <div className="detailContainer">
             <img className="detailPic" src={imageUrl}/>
             <div className="detailText">
-                <p className="detailName">Puppy name: <span className="detailData"> {name}</span></p>
-                <p className="detailBreed">Puppy breed: <span className="detailData">{breed}</span></p>
-                <p className="detailStatus">Puppy status: </p><span className="detailData">{status}</span>
-                <p className="detailTeam">Team name: <span className="detailData">{teamName}</span></p>
-                <p className="detailId">#{id}</p>
+                <p className="detailName">Name: <span className="detailData"> {name}</span></p>
+                <p className="detailBreed">Breed: <span className="detailData">{breed}</span></p>
+                <p className="detailStatus">Status: <span className="detailData">{capitalizeFirstLetter(status)}</span> </p>
+                <p className="detailTeam">Team Name: <span className="detailData">{teamName}</span></p>
+                <p className="detailId">ID: <span className="detailData">#{id}</span></p>
 
             </div>
             
