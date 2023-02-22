@@ -1,0 +1,32 @@
+#containerContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+}
+
+.puppyContainer:hover{
+    box-shadow: 10px 10px black;
+    
+}
+
+.textContainer{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 350px;
+}
+
+.puppyContainer{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.puppyPic{
+    height: 300px;
+    width: 200px;
+}
