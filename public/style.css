@@ -10,6 +10,7 @@ body{
 /* Main */
 
 #homeBttn{
+    position: static;
     border-radius: 3%;
     margin: 1%;
     font-size: 25px;

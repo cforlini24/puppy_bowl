@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
    const {searchTerm, setSearchTerm, useSearchBar, setUseSearchBar} = props;

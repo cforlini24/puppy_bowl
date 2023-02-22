@@ -21,6 +21,7 @@ const App = () => {
     }
 
     useEffect(() =>{
+        setUseSearchBar(true);
         getPuppiesData();
     }, [])
 
@@ -29,8 +30,9 @@ const App = () => {
             <ScrollToTop />
             <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} useSearchBar={useSearchBar} setUseSearchBar = {setUseSearchBar}/>
             <Routes>
+                {/* <Route path="*" element={<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar}/>}/> */}
                 <Route path="/" element = {<Main puppies = {puppies} searchTerm={searchTerm} setUseSearchBar={setUseSearchBar}/>}/>
-                <Route path="/:detailId" element = {<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar}/>} />
+                <Route path="/:detailId" element = {<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar} getPuppiesData={getPuppiesData}/>} />
             </Routes>
         </BrowserRouter>
     )

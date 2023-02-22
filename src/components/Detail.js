@@ -2,7 +2,7 @@ import react, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Detail = (props) => {
-    let {puppies, setUseSearchBar} = props;
+    let {puppies, setUseSearchBar, getPuppiesData} = props;
     let {detailId} = useParams();
     let detailPuppy = {};
     let [teamData, setTeamData] = useState([])
@@ -40,12 +40,15 @@ const Detail = (props) => {
 
     //function to fix capitalization on status value
     function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
+        if(string){ return string.charAt(0).toUpperCase() + string.slice(1)}
+        else{return null}
+       
     }
 
     useEffect(()=>{
         setUseSearchBar(false);
         getTeamData();
+        getPuppiesData();
     },[])
 
     return (
