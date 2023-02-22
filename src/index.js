@@ -1,7 +1,7 @@
 import {createRoot} from "react-dom/client";
 import {useState, useEffect} from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Detail, Main, Navbar } from "./components";
+import { Detail, Main, Navbar, ScrollToTop } from "./components";
 
 const App = () => {
     const [puppies, setPuppies] = useState([])
@@ -23,6 +23,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path="/" element = {<Main puppies = {puppies} />}/>

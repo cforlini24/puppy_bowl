@@ -1,32 +1,87 @@
+*{
+    background-color:  #e5f1e3;
+    color: #a3cd9e ;
+}
+body{
+    margin: 0;
+}
+
+#homeBttn{
+    margin: 1%;
+    font-size: 25px;
+    background-color: #35635b;
+    text-decoration: none;
+    padding: .5%;
+    border: solid #35635b
+}
+
+#homeBttn:hover{
+    border: solid #a3cd9e ;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1%;
+    background-color: #35635b
+}
+
 #containerContainer{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items:center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.puppyContainer:hover{
-    box-shadow: 10px 10px black;
-    
-}
 
 .textContainer{
+    padding: 7%;
+    background-color: #35635b;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 350px;
 }
 
 .puppyContainer{
-    padding: 2%;
+    border-radius: 3%;
+    border: solid #a3cd9e;
+    border-color: #529471;
+    background-color: #35635b;
+    margin: 5%;
+    margin-bottom: 1%;
+    padding: 1%;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+}
+/* on hover */
+.puppyContainer:hover{  
+    box-shadow: 10px 10px black;
 }
 
 .puppyPic{
+    border-radius: 3%;
+    border:solid  black;
     height: 300px;
     width: 200px;
 }
+.puppyName{
+    margin: 0;
+    background-color: #35635b;
+    text-decoration: none;
+}
+
+
+
+/* mobile formatting */
+@media (max-width: 800px) {
+    #containerContainer {
+        padding-top: 8%;
+      flex-direction: column;
+    }
+  }
