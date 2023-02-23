@@ -143,12 +143,14 @@ span{
 
 /* mobile formatting */
 @media (max-width: 800px) {
+    
     #containerContainer {
         padding-top: 8%;
       flex-direction: column;
     }
     #homeBttn{
         padding: 0;
+        font-size: 20px;
     }
 
     .detailContainer{
@@ -169,6 +171,7 @@ span{
         width: 100%;
     }
     input{
+        font-size: 20px;
         width: 50%;
     }
   }
