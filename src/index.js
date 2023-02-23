@@ -2,19 +2,40 @@ import {createRoot} from "react-dom/client";
 import {useState, useEffect} from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Detail, Main, Navbar, ScrollToTop } from "./components";
+import jadeImage from "./jadePic.jpg"
+import ivyImage from "./ivyPic.jpg"
 
 const App = () => {
     const [puppies, setPuppies] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
     const [useSearchBar, setUseSearchBar] = useState(true)
 
+    //I wanted to add my own pets :) 
+    let jade = {
+        "id" : 1360,
+        "name" : "Jade",
+        "breed": "Tabby",
+        "status": "bench",
+        "imageUrl": jadeImage,
+        "teamId": 195
+    }
+     
+    let ivy = {
+        "id" : 1361,
+        "name": "Ivy",
+        "breed": "I dont know lol",
+        "status": "bench",
+        "imageUrl":ivyImage,
+        "teamId": 195
+    }
 
 
     async function getPuppiesData () {
         try {
             let response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2301-FTB-MT-WEB-FT/players");
             let data = await response.json();
-            setPuppies(data.data.players)
+            let players = data.data.players
+            setPuppies([...players, jade, ivy])
         } catch (error) {
             console.log(error)
         }
