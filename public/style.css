@@ -191,6 +191,11 @@ form{
     border-color: red;
 }
 
+#createForm{
+    border-bottom: solid #529471 ;
+    margin-bottom: 3%;
+}
+
 
 
 /* mobile formatting */
@@ -225,5 +230,11 @@ form{
     #searchBar{
         font-size: 20px;
         width: 50%;
+    }
+    .formBttn{
+        font-size: 20px;
+    }
+    .formInput {
+        font-size: 20px;
     }
   }

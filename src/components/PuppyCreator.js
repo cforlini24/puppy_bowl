@@ -52,7 +52,7 @@ const PuppyCreator = (props) => {
 
     return (
         <div id="formContainer">
-        <form>
+        <form id="createForm">
             <input className="formInput" type="text" placeholder="New puppy name" value={newPuppyName} onChange={(event) => {
                 setNewPuppyName(event.target.value);
             }}></input>
