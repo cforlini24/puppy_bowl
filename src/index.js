@@ -2,8 +2,7 @@ import {createRoot} from "react-dom/client";
 import {useState, useEffect} from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Detail, Main, Navbar, ScrollToTop, PuppyCreator } from "./components";
-import jadeImage from "./jadePic.jpg"
-import ivyImage from "./ivyPic.jpg"
+
 
 const App = () => {
     const [puppies, setPuppies] = useState([])
