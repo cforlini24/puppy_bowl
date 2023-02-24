@@ -34,7 +34,7 @@ const App = () => {
             <Routes>
                 <Route path="/*" element={<Main puppies = {puppies} searchTerm={searchTerm} setUseSearchBar={setUseSearchBar} setPuppies={setPuppies}/>}/>
                 <Route path="/" element = {<Main puppies = {puppies} searchTerm={searchTerm} setUseSearchBar={setUseSearchBar} setPuppies={setPuppies}/>}/>
-                <Route path="/:detailId" element = {<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar} getPuppiesData={getPuppiesData}/>} />
+                <Route path="/:detailId" element = {<Detail puppies = {puppies} setUseSearchBar={setUseSearchBar} getPuppiesData={getPuppiesData} setPuppies={setPuppies}/>} />
             </Routes>
         </BrowserRouter>
     )
