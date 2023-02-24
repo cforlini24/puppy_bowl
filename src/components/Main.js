@@ -1,8 +1,9 @@
 import react, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import PuppyCreator from "./PuppyCreator";
 
 const Main = (props) => {
-    const {puppies, searchTerm, setUseSearchBar} = props;
+    const {puppies, searchTerm, setUseSearchBar, setPuppies} = props;
 
     let filteredPuppies = puppies.filter((puppy) =>{
         let lowcaseName = puppy.name.toLowerCase();
@@ -28,6 +29,8 @@ const Main = (props) => {
                 )
             }): <div>Data loading</div>
         }
+
+        <PuppyCreator setPuppies={setPuppies} puppies={puppies}/>
         </div>
     )
 }

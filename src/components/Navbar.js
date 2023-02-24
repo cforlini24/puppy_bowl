@@ -11,7 +11,7 @@ const Navbar = (props) => {
                 setSearchTerm("")
             }}>HOME</Link>
 
-            <input 
+            <input id="searchBar" 
             type="text" 
             placeholder="Search puppy name" 
             value={searchTerm}

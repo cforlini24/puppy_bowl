@@ -36,7 +36,7 @@ nav{
     border-bottom: solid #529471 ;
     height: 4%;
 }
-input{
+#searchBar{
     margin-right: 5%;
     font-size: 25px;
     background-color: #e5f1e3;
@@ -140,6 +140,58 @@ span{
     background-color: inherit;
 }
 
+/* forms */
+#formContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1%;
+    border: solid #529471;
+    background-color: #35635b;
+    font-size: 25px;
+    padding: 1%;
+    width: 75%;
+    height: 20%;
+    margin: 5%;
+}
+
+form{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: inherit;
+    font-size: 25px;
+}
+
+.formInput{
+    font-size: 25px;
+    margin: 1%;
+}
+
+.formBttn{
+    font-size: 25px;
+    margin: 1%;
+    background-color: #35635b;
+    text-decoration: none;
+    padding: .5%;
+    border: solid #35635b
+}
+
+.formBttn:hover{
+    border: solid #a3cd9e ;
+    cursor:pointer;
+}
+
+.errorMessage{
+    color: red;
+    border-color: red;
+}
+.errorMessage:hover{
+    color: red;
+    border-color: red;
+}
+
+
 
 /* mobile formatting */
 @media (max-width: 800px) {
@@ -170,7 +222,7 @@ span{
     .detailText{
         width: 100%;
     }
-    input{
+    #searchBar{
         font-size: 20px;
         width: 50%;
     }
